@@ -15,7 +15,6 @@ app.use(express.json())
 
 
 
-app.get('/', async (req, res) => {
-    console.log('ran test')
-    res.send(JSON.stringify({message: 'Working fucker'}));
+app.get('/productos', async (req, res) => {
+    res.sendFile('/home/jlaprade/public_html/products/products.html')
 })
