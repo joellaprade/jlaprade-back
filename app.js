@@ -14,7 +14,7 @@ app.use(express.json())
 
 app.get('/productos', async (req, res) => {
     var data = await Tracker.find()
-    console.log(data)
+    console.log(data[0])
     // Tracker.findByIdAndUpdate('659c774f2d824d8a70c4eb0c', {
     //     inicio: inicio + 1
     // })
