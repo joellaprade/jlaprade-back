@@ -5,12 +5,9 @@ const port = 8000;
 
 const dbURI = 'mongodb+srv://joellaprade:kZvCIqWpNNBNUn2K@jlapradecluster.xdnaioy.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(result => {
-        console.log('listening')
-    })
+    .then(result => app.listen(port))
     .catch((err) => console.log(err))
 
-app.listen(port)
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
