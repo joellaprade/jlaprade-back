@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.get('/productos', async (req, res) => {
-    Tracker.findById('659c774f2d824d8a70c4eb0c')
-        .then(result => console.log(result))
+    var data = await Tracker.findById('659c774f2d824d8a70c4eb0c')
+    console.log(data)
     // Tracker.findByIdAndUpdate('659c774f2d824d8a70c4eb0c', {
     //     inicio: inicio + 1
     // })
