@@ -18,7 +18,7 @@ app.use(express.json())
 
 
 
-app.get('/test', (req, res) => {
+app.get('/test', async (req, res) => {
     console.log('ran test')
-    res.send(JSON.parse({message: 'Working fucker'}));
+    res.send(JSON.stringify({message: 'Working fucker'}));
 })
