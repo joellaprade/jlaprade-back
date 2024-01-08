@@ -18,7 +18,7 @@ app.use(express.json())
 
 
 
-console.log('ay')
+app.get
 
 
 
