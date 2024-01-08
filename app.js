@@ -11,8 +11,6 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-
-
 app.get('/productos', async (req, res) => {
     res.sendFile('/home/jlaprade/public_html/products/products.html')
 })
