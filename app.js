@@ -1,6 +1,6 @@
 const express = require('express');
-const port = 8000;
 const app = express();
+const port = 8000;
 
 const dbURI = 'mongodb+srv://jlaprade:today2428M@nodetuts.3rfiajp.mongodb.net/events?retryWrites=true&w=majority'
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
