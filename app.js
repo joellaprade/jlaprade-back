@@ -11,12 +11,11 @@ const port = 8000;
 
 app.listen(port)
 app.use(express.urlencoded({ extended: true }))
-// app.use(express.static('public'))
 app.use(express.json())
 
 
 
-app.get('/test', async (req, res) => {
+app.get('/', async (req, res) => {
     console.log('ran test')
     res.send(JSON.stringify({message: 'Working fucker'}));
 })
