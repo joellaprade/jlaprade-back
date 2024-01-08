@@ -15,7 +15,6 @@ const app = express();
 app.use(express.urlencoded({ extended: true }))
 // app.use(express.static('public'))
 app.use(express.json())
-console.log('ran')
 
 
 
@@ -23,3 +22,5 @@ app.get('/test', (req, res) => {
     console.log('ran')
     res.send(JSON.parse({message: 'Working fucker'}));
 })
+
+console.log('ran')
