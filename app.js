@@ -19,5 +19,6 @@ app.use(express.json())
 
 
 app.get('/test', (req, res) => {
+    console.log('ran')
     res.send(JSON.parse({message: 'Working fucker'}));
 })
