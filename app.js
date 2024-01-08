@@ -19,7 +19,7 @@ app.use(express.json())
 
 
 app.get('/', (req, res) => {
-    res.send('Working fucker');
+    res.send({message: 'Working fucker'});
 })
 
 
