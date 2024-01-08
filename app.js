@@ -13,8 +13,10 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.get('/productos', async (req, res) => {
-    Tracker.findByIdAndUpdate('659c774f2d824d8a70c4eb0c', {
-        inicio: inicio + 1
-    })
+    var dato = Tracker.find('659c774f2d824d8a70c4eb0c')
+        .then(result => console.log(result))
+    // Tracker.findByIdAndUpdate('659c774f2d824d8a70c4eb0c', {
+    //     inicio: inicio + 1
+    // })
     res.sendFile('/home/jlaprade/public_html/products/products.html')
 })
