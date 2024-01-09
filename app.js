@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const app = express();
 const port = 8000;
 const Tracker = require('./models/tracker');
-var tracker = Tracker.findById('659c855c436a8377c2f9bf9e')
-    .then(result => console.log(tracker))
+var tracker;
 
 const dbURI = 'mongodb+srv://joellaprade:kZvCIqWpNNBNUn2K@jlapradecluster.xdnaioy.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -29,3 +28,13 @@ app.get('/productos', async (req, res) => {
     })
     res.sendFile('/home/jlaprade/public_html/products/products.html')
 })
+
+
+
+
+const getTracker = async () => {
+    tracker = await Tracker.findById('659c855c436a8377c2f9bf9e')
+    console.log(tracker)
+} 
+
+getTracker();
