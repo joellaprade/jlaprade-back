@@ -20,6 +20,7 @@ app.use(express.json())
 
 
 app.get('/productos', async (req, res) => {
+    console.log(tracker.productos)
     await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
         inicio: tracker.inicio,
         productos: Number(tracker.productos) + 1,
