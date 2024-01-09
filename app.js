@@ -20,12 +20,8 @@ app.use(express.json())
 
 
 app.get('/productos', async (req, res) => {
-    var data = await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
+    await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
         productos: tracker.productos + 1
     })
-    console.log(data);
-    // Tracker.findByIdAndUpdate('659c774f2d824d8a70c4eb0c', {
-    //     inicio: inicio + 1
-    // })
     res.sendFile('/home/jlaprade/public_html/products/products.html')
 })
