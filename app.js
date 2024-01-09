@@ -35,6 +35,14 @@ app.get('/productos', async (req, res) => {
     res.sendFile('/home/jlaprade/public_html/products/products.html')
 })
 
+app.get('/proyectos', async (req, res) => {
+    await getTracker();
+    await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
+        proyectos: tracker.proyectos + 1,
+    })
+    res.sendFile('/home/jlaprade/public_html/proyects/proyects.html')
+})
+
 
 
 
