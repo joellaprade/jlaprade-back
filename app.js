@@ -23,7 +23,7 @@ app.get('/productos', async (req, res) => {
     await getTracker();
     await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
         inicio: tracker.inicio,
-        productos: 2,
+        productos: tracker.productos + 1,
         proyectos: tracker.proyectos
     })
     res.sendFile('/home/jlaprade/public_html/products/products.html')
