@@ -35,7 +35,7 @@ app.get('/productos', async (req, res) => {
         productos: tracker.productos + 1,
     })
     console.log('Logged to productos at: ' + getTime())
-    res.sendFile('/home/jlaprade/public_html/products/products.html')
+    res.sendFile('/home/jlaprade/public_html/products/products.html');
 })
 
 app.get('/proyectos', async (req, res) => {
