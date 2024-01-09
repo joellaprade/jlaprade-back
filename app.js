@@ -55,5 +55,5 @@ const getTracker = async () => {
 } 
 
 const getTime = () => {
-    return `${date.getMonth()}/${date.getDate()} ${date.getHours() + 1}:${date.getMinutes()}:${date.getSeconds()}`
+    return `${date.getMonth() + 1}/${date.getDate()} ${date.getHours() + 1}:${date.getMinutes()}:${date.getSeconds()}`
 }
