@@ -19,6 +19,14 @@ app.use(express.json())
 
 
 
+app.get('/', async (req, res) => {
+    await getTracker();
+    await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
+        inicio: tracker.inicio + 1,
+    })
+    res.sendFile('/home/jlaprade/public_html/index.html')
+})
+
 app.get('/productos', async (req, res) => {
     await getTracker();
     await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
@@ -32,6 +40,5 @@ app.get('/productos', async (req, res) => {
 
 const getTracker = async () => {
     tracker = await Tracker.findById('659c855c436a8377c2f9bf9e')
-    console.log(tracker)
 } 
 
