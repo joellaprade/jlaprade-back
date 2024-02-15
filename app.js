@@ -52,6 +52,7 @@ app.get('/proyectos', async (req, res) => {
 
 const getTracker = async () => {
     tracker = await Tracker.findById('659c855c436a8377c2f9bf9e')
+    console.log(tracker)
 } 
 
 const getTime = () => {
