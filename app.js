@@ -22,7 +22,7 @@ app.use(express.json())
 
 app.get('/', async (req, res) => {
     await getTracker();
-    await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
+    await Tracker.findByIdAndUpdate('65ce58a6957ee3abb0f32e51', {
         inicio: tracker.inicio + 1,
     })
     console.log('Logged to / at: ' + getTime())
@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
 
 app.get('/productos', async (req, res) => {
     await getTracker();
-    await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
+    await Tracker.findByIdAndUpdate('65ce58a6957ee3abb0f32e51', {
         productos: tracker.productos + 1,
     })
     console.log('Logged to productos at: ' + getTime())
@@ -40,7 +40,7 @@ app.get('/productos', async (req, res) => {
 
 app.get('/proyectos', async (req, res) => {
     await getTracker();
-    await Tracker.findByIdAndUpdate('659c855c436a8377c2f9bf9e', {
+    await Tracker.findByIdAndUpdate('65ce58a6957ee3abb0f32e51', {
         proyectos: tracker.proyectos + 1,
     })
     console.log('Logged to proyectos at: ' + getTime())
@@ -51,7 +51,7 @@ app.get('/proyectos', async (req, res) => {
 
 
 const getTracker = async () => {
-    tracker = await Tracker.findById('659c855c436a8377c2f9bf9e')
+    tracker = await Tracker.findById('65ce58a6957ee3abb0f32e51')
 } 
 
 const getTime = () => {
